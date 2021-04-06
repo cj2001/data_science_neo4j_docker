@@ -19,19 +19,19 @@ Then start the container:
 docker-compose up
 ```
 
+This will start up both a Jupyter Lab notebook at `localhost:8888` (note that there will be a token associated with this which you will need to grab as that container is starting) as well as the Neo4j browser at `localhost:7474`.  This are both configurable to whatever port you want.
+
 When you are done with the container, stop it vial `CTRL-c` and then:
 
 ```
 docker-compose down
 ```
 
-This will start up both a Jupyter Lab notebook at `localhost:8888` (note that there will be a token associated with this which you will need to grab as that container is starting) as well as the Neo4j browser at `localhost:7474`.  This are both configurable to whatever port you want.
-
 ## Some notes
 
 - There are two different Python packages that can be used to connect to Neo4j from within Python.  It is probably easiest to just pick one and go with it.
-  - `[neo4j]`(https://neo4j.com/docs/api/python-driver/current/): The official, Neo4j-supported Python driver
-  - `[py2neo]`(https://py2neo.org/2021.0/): A community-developed driver with lots of solid documentation and examples out there
+  - `neo4j`(https://neo4j.com/docs/api/python-driver/current/): The official, Neo4j-supported Python driver
+  - `py2neo`(https://py2neo.org/2021.0/): A community-developed driver with lots of solid documentation and examples out there
 - The container is set up to run Neo4j with the user name `neo4j` and the password as `1234`.  You will want to change the password in particular.
 - The `docker-compose.yml` file includes some optional environment variables for setting memory values.  Since this container includes the Graph Data Science (GDS) library, it is a good idea to add some heap memory.  The exact values will depend on your machine.  You will want to experiment with tuning this based on [these instructions](https://neo4j.com/docs/operations-manual/current/performance/memory-configuration/)
 - The Neo4j portion of the container includes two libraries that are very helpful for doing data science with graphs.  These are APOC and GDS.  The latest versions should be pulled when this container executes.  Links to their use are provided below.
