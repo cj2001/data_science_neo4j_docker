@@ -33,6 +33,7 @@ docker-compose down
   - `neo4j`(https://neo4j.com/docs/api/python-driver/current/): The official, Neo4j-supported Python driver
   - `py2neo`(https://py2neo.org/2021.0/): A community-developed driver with lots of solid documentation and examples out there
 - The container is set up to run Neo4j with the user name `neo4j` and the password as `1234`.  You will want to change the password in particular.
+- There is a notebook in `notebooks/` that tests to make sure that Jupyter can properly connect to Neo4j.  Run this to verify.
 - The `docker-compose.yml` file includes some optional environment variables for setting memory values.  Since this container includes the Graph Data Science (GDS) library, it is a good idea to add some heap memory.  The exact values will depend on your machine.  You will want to experiment with tuning this based on [these instructions](https://neo4j.com/docs/operations-manual/current/performance/memory-configuration/)
 - The Neo4j portion of the container includes two libraries that are very helpful for doing data science with graphs.  These are APOC and GDS.  The latest versions should be pulled when this container executes.  Links to their use are provided below.
 
