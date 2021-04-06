@@ -1,0 +1,5 @@
+jupyterlab==3.0.7
+neo4j==4.2.1
+py2neo==2021.0.1
+
+
