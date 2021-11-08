@@ -17,10 +17,10 @@ services:
       - apoc.import.file.enabled=true
       - apoc.export.file.enabled=true
       - apoc.export.json.all=true
-      # Comment these lines if you do not have the memory available
-      - NEO4J_dbms_memory_pagecache_size=4G
-      - NEO4j_dbms_memory_heap_initial__size=4G
-      - NEO4J_dbms_memory_heap_max__size=8G
+      # Uncomment these lines if you have the memory available
+      # - NEO4J_dbms_memory_pagecache_size=4G
+      # - NEO4j_dbms_memory_heap_initial__size=4G
+      # - NEO4J_dbms_memory_heap_max__size=8G
     networks:
       - neo_net
 
